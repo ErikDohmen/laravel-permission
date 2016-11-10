@@ -43,7 +43,7 @@ trait HasRoles
      */
     public function getMainRole()
     {
-        return collect($this->roles)->orderByDesc('level')->first(); 
+        return $this->roles->sortByDesc('level')->first();
     }
 
     /**
